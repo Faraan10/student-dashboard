@@ -1,12 +1,7 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
-const PrivateRoute = () => {
-  return (
-    <div>
-      <Outlet />
-    </div>
-  );
+const PrivateRoute = ({ user }) => {
+  return <div>{user ? <Outlet /> : <Navigate to="/login" replace />}</div>;
 };
 
 export default PrivateRoute;

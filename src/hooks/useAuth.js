@@ -3,7 +3,7 @@ import { onAuthStateChanged } from "firebase/auth"; // to persist user login
 import { auth } from "../firebase"; // from firebase file
 
 const useAuth = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

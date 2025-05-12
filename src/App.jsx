@@ -19,7 +19,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<MainLayout />}>
+          <Route element={<MainLayout user={user} />}>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<NotFound />} />
             <Route element={<PrivateRoute user={user} />}>

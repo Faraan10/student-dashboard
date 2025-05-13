@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import Spinner from "../components/Spinner";
 
 const Home = () => {
   const { user, loading } = useAuth();
 
-  // if (loading) {
-  //   return (
-
-  //   );
-  // }
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
     <section className="min-h-screen bg-base-200 flex flex-col items-center justify-center px-6 text-center">

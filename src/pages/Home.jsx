@@ -4,14 +4,15 @@ import Spinner from "../components/Spinner";
 
 const Home = () => {
   const { user, loading } = useAuth();
+  // console.log(user);
 
   if (loading) {
     return <Spinner />;
   }
 
   return (
-    <section className="min-h-screen bg-base-200 flex flex-col items-center justify-center px-6 text-center">
-      <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+    <section className="min-h-screen bg-base-100 flex flex-col items-center justify-center px-6 text-center">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4">
         Welcome to Student Dashboard
       </h1>
       <p className="text-base-content text-lg md:w-2/3 mb-6">

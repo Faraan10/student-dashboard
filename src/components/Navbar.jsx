@@ -7,14 +7,12 @@ import useAuth from "../hooks/useAuth";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
 
   const toggleButton = () => setIsOpen(!isOpen);
 
-  // const { loading, user } = useAuth();
-  const fakeUser = { uid: "123", email: "test@example.com" }; // ✅ Mock user
-  const user = fakeUser;
-  const loading = false;
+  const fakeUser = { uid: "123", email: "test@example.com" }; // currently user is logged in
+  const user = fakeUser; //fake data 3 lines if commented
+  const loading = false; // avatar dropdown will disappear
 
   useEffect(() => {
     const handleEsc = (e) => e.key === "Escape" && setIsOpen(false);

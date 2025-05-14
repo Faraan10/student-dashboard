@@ -7,11 +7,11 @@ const useAuth = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const user = onAuthStateChanged(auth, (firebaseUser) => {
+    const userData = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser);
       setLoading(false);
     });
-    return () => user();
+    return () => userData();
   }, []);
   return { user, loading };
 };

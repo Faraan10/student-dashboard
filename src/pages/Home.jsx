@@ -4,7 +4,7 @@ import Spinner from "../components/Spinner";
 
 const Home = () => {
   const { user, loading } = useAuth();
-  // console.log(user);
+  console.log(user);
 
   if (loading) {
     return <Spinner />;
